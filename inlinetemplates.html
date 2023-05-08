@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
+    <style>
+        .color-red { color: red; }
+        .color-blue { color: blue; }
+        .is-loading { background: red; }
+    </style>
+</head>
+<body>
+
+    <div id="root" class="container">
+
+        <progress-view inline-template>
+            <div>
+                <h1>Your Progress Through This Course Is {{completionRate}}</h1>
+
+                <p>
+                    <button @click="completionRate += 10">Update Completion Rate</button>
+                </p>
+            </div>
+        </progress-view>
+
+    </div>
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script src="inlinetemplates.js"></script>
+</body>
+</html>
